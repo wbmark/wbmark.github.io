@@ -644,7 +644,7 @@ Horizontal Menu
   .page-header.navbar {
     /* Top menu */ }
     .page-header.navbar .top-menu {
-      display: block;
+      display: none;
       clear: both;
       float: none; }
       .page-header.navbar .top-menu .navbar-nav {

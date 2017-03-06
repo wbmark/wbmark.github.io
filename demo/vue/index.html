@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../asserts/plugins/vue/vue.min.js"></script>
+</head>
+<body>
+
+<div>
+</div>
+<div id="app">
+    <input v-model="newTodo" v-on:keyup.enter="addTodo">
+    <ul>
+        <li v-for="todo in todos">
+            <span>{{ todo.text }}</span>
+            <button v-on:click="removeTodo($index)">X</button>
+        </li>
+    </ul>
+</div>
+
+<div id="example">
+    <form id="search">
+        Search <input name="query" v-model="searchQuery"/>
+    </form>
+    <demo-grid
+            :table-content = "gridContent"
+            :table-header = "gridHeader"
+            :isA = "AorB"
+    >
+    </demo-grid>
+</div>
+<scirpt type="text/x-template" id="grid-template">
+    <ul class="table-header" @click="changeData">
+        <li class="table-cell" v-for="item in tableHeader">{{item}}</li>
+    </ul>
+    <div class="table-content">
+        <div class="table-row" v-for="item in tableContent  | filterBy filterKey in 'a' | orderBy 'a' soryKey">
+            <div class="table-cell">{{item.a}}</div>
+            <div class="table-cell">{{item.b}}</div>
+            <div class="table-cell">{{item.c}}</div>
+            <div class="table-cell">{{item.d}}</div>
+        </div>
+    </div>
+</scirpt>
+
+
+<script type="text/javascript">
+    new Vue({
+        el: '#app',
+        data: {
+            newTodo: '',
+            todos: [
+                { text: 'Add some todos' }
+            ]
+        },
+        methods: {
+            addTodo: function () {
+                var text = this.newTodo.trim()
+                if (text) {
+                    this.todos.push({ text: text })
+                    this.newTodo = ''
+                }
+            },
+            removeTodo: function (index) {
+                this.todos.splice(index, 1)
+            }
+        }
+    });
+
+    new Vue({
+        el: '#example',
+        data: {
+            gridContent: [],
+            gridHeader: ['目标', '日志', '日期', '状态'],
+            AorB: false
+        }
+    });
+
+    Vue.component('demo-grid', {
+        template: '#grid-template',
+        props: {
+            tableContent: Array,
+            tableHeader: Array,
+            isA: Boolean
+        },
+        data : {
+            //对于实例数据的处理
+
+        },
+        methods: {
+            changeData:function () {
+
+                !this.isA;
+                if(this.isA) {
+                    return this.tableContent = itemsB;
+                }
+                return this.tableContent = itemsA;
+            }
+        }
+    });
+
+</script>
+
+
+
+</body>
+</html>

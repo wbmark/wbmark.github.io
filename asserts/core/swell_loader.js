@@ -27,6 +27,8 @@
             'swell-validate' : "swell/jQ_validate",
             'jquery-ui' : "jquery-ui/jquery-ui.min",
             'jquery-slimscroll' : "jquery-slimscroll/jquery.slimscroll.min",
+            'jquery-notific' : "jquery-notific8/jquery.notific8.min",
+            'ui-notific' : "../pages/js/ui-notific8",
             'swell' : "../layouts/swell",
             'quick-sidebar' : "../layouts/quick-sidebar",
             'dashboard' : "../layouts/layout/scripts/dashboard",
@@ -75,7 +77,8 @@
             'quick-sidebar' :{deps:['swell']},
             'layout': {
                 deps:['quick-sidebar','dashboard','demo']
-            }
+            },
+            'ui-notific':{deps:['jquery-notific']}
 
         }
 

@@ -29,6 +29,11 @@
             'jquery-notific' : "jquery-notific8/jquery.notific8.min",
             'ui-notific' : "../../demo/js/ui-notific8",
             'jquery_jstree' : "jstree/dist/jstree.min",
+
+            'bootstrap-modal' : "bootstrap-modal/js/bootstrap-modal",
+            'bootstrap-modalmanager' : "bootstrap-modal/js/bootstrap-modalmanager",
+
+
             'swell' : "../layouts/swell",
             'quick-sidebar' : "../layouts/quick-sidebar",
             'dashboard' : "../layouts/layout/scripts/dashboard",
@@ -79,8 +84,9 @@
                 deps:['quick-sidebar','dashboard','demo']
             },
             'jquery-notific':{deps:['css!jquery-notific8/jquery.notific8.min.css']},
-            'jquery_jstree':{deps:['css!jstree/dist/themes/default/style.css']}
+            'jquery_jstree':{deps:['css!jstree/dist/themes/default/style.css']},
 
+            'bootstrap-modal':{deps:['bootstrap-modalmanager','css!../plugins/bootstrap-modal/css/bootstrap-modal.css','css!../plugins/bootstrap-modal/css/bootstrap-modal-bs3patch.css']}
         }
 
 

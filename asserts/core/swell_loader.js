@@ -25,10 +25,10 @@
             'jquery-validate' : "jquery-validation/jquery.validate.min",
             'jquery-metadata' : "jquery-validation/jquery.metadata",
             'swell-validate' : "swell/jQ_validate",
-            'jquery-ui' : "jquery-ui/jquery-ui.min",
             'jquery-slimscroll' : "jquery-slimscroll/jquery.slimscroll.min",
             'jquery-notific' : "jquery-notific8/jquery.notific8.min",
-            'ui-notific' : "../pages/js/ui-notific8",
+            'ui-notific' : "../../demo/js/ui-notific8",
+            'jquery_jstree' : "jstree/dist/jstree.min",
             'swell' : "../layouts/swell",
             'quick-sidebar' : "../layouts/quick-sidebar",
             'dashboard' : "../layouts/layout/scripts/dashboard",
@@ -78,7 +78,8 @@
             'layout': {
                 deps:['quick-sidebar','dashboard','demo']
             },
-            'ui-notific':{deps:['jquery-notific']}
+            'jquery-notific':{deps:['css!jquery-notific8/jquery.notific8.min.css']},
+            'jquery_jstree':{deps:['css!jstree/dist/themes/default/style.css']}
 
         }
 

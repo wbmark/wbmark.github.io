@@ -2,7 +2,7 @@
  * Created by weibin on 2017/3/6.
  */
 
-(function (ns) {
+(function (ns,$) {
 
     /* webcontext */
     var vendorPath = '../asserts/plugins/';
@@ -33,6 +33,13 @@
             'bootstrap-modal' : "bootstrap-modal/js/bootstrap-modal",
             'bootstrap-modalmanager' : "bootstrap-modal/js/bootstrap-modalmanager",
 
+            //time picker
+            'bootstrap-datepicker' : "bootstrap-datepicker/js/bootstrap-datepicker.min",
+            'bootstrap-daterangepicker' : "bootstrap-daterangepicker/daterangepicker",
+            'moment' : "bootstrap-daterangepicker/moment.min",
+            'bootstrap-datetimepicker' : "bootstrap-datetimepicker/js/bootstrap-datetimepicker.min",
+            'bootstrap-timepicker' : "bootstrap-timepicker/js/bootstrap-timepicker.min",
+            'clockface' : "clockface/js/clockface",
 
             'swell' : "../layouts/swell",
             'quick-sidebar' : "../layouts/quick-sidebar",
@@ -53,17 +60,15 @@
 
             'jquery-ui': {
                 deps: [
-                    'jquery'
                     // 'css!../plugins/jquery-ui/jquery-ui.min.css',
                     //  'css!../plugins/jquery-ui/jquery-ui.theme.min.css'
                 ]
             },
             'jquery-form': {
-                deps: ['jquery', 'jquery-validate','jquery-metadata','swell-validate']
+                deps: [ 'jquery-validate','jquery-metadata','swell-validate']
             },
             'mmgrid': {
                 deps: [
-                    'jquery',
                     'css!../plugins/mmgrid/mmGrid.css'
                 ]
 
@@ -85,6 +90,12 @@
             },
             'jquery-notific':{deps:['css!jquery-notific8/jquery.notific8.min.css']},
             'jquery_jstree':{deps:['css!jstree/dist/themes/default/style.css']},
+
+            'bootstrap-daterangepicker' : {deps: ['css!../plugins/bootstrap-daterangepicker/daterangepicker.min.css']},
+            'bootstrap-datepicker' : {deps: ['css!../plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css']},
+            'bootstrap-datetimepicker' : {deps: ['css!../plugins/bootstrap-datetimepicker/css/bootstrap-datetimepicker3.min.css']},
+            'bootstrap-timepicker' : {deps: ['css!../plugins/bootstrap-timepicker/css/bootstrap-timepicker.min.css']},
+            'clockface' : {deps: ['bootstrap','moment','bootstrap-daterangepicker','bootstrap-datepicker','bootstrap-timepicker','bootstrap-datetimepicker','css!../plugins/clockface/css/clockface.css']},
 
             'bootstrap-modal':{deps:['bootstrap-modalmanager','css!../plugins/bootstrap-modal/css/bootstrap-modal.css','css!../plugins/bootstrap-modal/css/bootstrap-modal-bs3patch.css']}
         }

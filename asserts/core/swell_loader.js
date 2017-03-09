@@ -92,8 +92,8 @@
             'jquery_jstree':{deps:['css!jstree/dist/themes/default/style.css']},
 
             'bootstrap-daterangepicker' : {deps: ['css!../plugins/bootstrap-daterangepicker/daterangepicker.min.css']},
-            'bootstrap-datepicker' : {deps: ['css!../plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css']},
-            'bootstrap-datetimepicker' : {deps: ['css!../plugins/bootstrap-datetimepicker/css/bootstrap-datetimepicker3.min.css']},
+            'bootstrap-datepicker' : {deps: ['css!../plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css']},
+            'bootstrap-datetimepicker' : {deps: ['css!../plugins/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css']},
             'bootstrap-timepicker' : {deps: ['css!../plugins/bootstrap-timepicker/css/bootstrap-timepicker.min.css']},
             'clockface' : {deps: ['bootstrap','moment','bootstrap-daterangepicker','bootstrap-datepicker','bootstrap-timepicker','bootstrap-datetimepicker','css!../plugins/clockface/css/clockface.css']},
 

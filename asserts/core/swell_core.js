@@ -6,7 +6,7 @@
     if(typeof win.swell === "undefined"){
         swell = {
             isRTL : function() {
-                return true;
+                return false;
             }
 
         }

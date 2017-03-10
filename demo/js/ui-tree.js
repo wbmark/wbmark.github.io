@@ -1,4 +1,4 @@
-swell.require(['jquery_jstree','layout'],function () {
+swell.require(['layout','jstree'],function () {
 
     var handleSample1 = function () {
 

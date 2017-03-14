@@ -41,7 +41,7 @@
     jpeg: {
       0xffe1: [] // APP1 marker
     }
-  }
+  },
 
   // Parses image meta data and calls the callback with an object argument
   // with the following properties:

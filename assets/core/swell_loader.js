@@ -5,12 +5,12 @@
 (function (ns,$) {
 
     /* webcontext */
-    var vendorPath = '../asserts/plugins/';
+    var vendorPath = '../assets/plugins/';
     // var vendorPath = 'D:/gitrepo/swelljs/lib/plugins/';
     require.config({
         // urlArgs:'v='+ (new Date()).getTime(),
         baseUrl: vendorPath,
-        waitSeconds: 60,
+        waitSeconds: 30,
         map: {
             '*': {
                 'css': vendorPath+'require/css.min.js',
@@ -54,31 +54,13 @@
             'clockface' : "clockface/js/clockface",
 
             'bootstrap-fileinput' : "bootstrap-fileinput/bootstrap-fileinput",
+            'fileinput': 'bootstrap-fileinput/fileinput.min',
+            'fa-theme': "bootstrap-fileinput/themes/fa/theme",
+            'explorer-theme': "bootstrap-fileinput/themes/explorer/theme",
+            'canvas-to-blob': "bootstrap-fileinput/plugins/canvas-to-blob.min",
+            'purify': "bootstrap-fileinput/plugins/purify",
+            'sortable': "bootstrap-fileinput/plugins/sortable",
 
-            'jquery.fancybox' : "fancybox/source/jquery.fancybox.pack",
-            'jquery.ui.widget' : "jquery-file-upload/js/vendor/jquery.ui.widget",
-            'tmpl' : "jquery-file-upload/js/vendor/tmpl.min",
-            'load-image' : "jquery-file-upload/js/vendor/load-image.min",
-            'load-image-meta' : "jquery-file-upload/js/vendor/load-image-meta",
-            'load-image-exif' : "jquery-file-upload/js/vendor/load-image-exif",
-            'canvas-to-blob' : "jquery-file-upload/js/vendor/canvas-to-blob.min",
-            'jquery.blueimp-gallery' : "jquery-file-upload/blueimp-gallery/jquery.blueimp-gallery.min",
-            'blueimp-helper' : "jquery-file-upload/blueimp-gallery/blueimp-helper",
-
-            //
-            // 'load-image-meta': '/Content/jQueryFileUpload/js/load-image-meta',
-            // 'load-image-exif': ['/Content/jQueryFileUpload/js/load-image-meta', '/Content/jQueryFileUpload/js/load-image-exif'],
-            // 'load-image-ios': '/Content/jQueryFileUpload/js/load-image-ios',
-
-            'jquery.iframe-transport' : "jquery-file-upload/js/jquery.iframe-transport",
-            'jquery.fileupload' : "jquery-file-upload/js/jquery.fileupload",
-            'jquery.fileupload-process' : "jquery-file-upload/js/jquery.fileupload-process",
-            'jquery.fileupload-image' : "jquery-file-upload/js/jquery.fileupload-image",
-            'jquery.fileupload-audio' : "jquery-file-upload/js/jquery.fileupload-audio",
-            'jquery.fileupload-video' : "jquery-file-upload/js/jquery.fileupload-video",
-            'jquery.fileupload-validate' : "jquery-file-upload/js/jquery.fileupload-validate",
-            'jquery.fileupload-ui' : "jquery-file-upload/js/jquery.fileupload-ui",
-            'jquery.fileupload-jquery-ui': "jquery-file-upload/js/jquery.fileupload-jquery-ui",
 
             'bootboxjs': "bootbox/bootbox.min",
 
@@ -154,12 +136,9 @@
             'bootstrap-modal':{deps:['bootstrap-modalmanager','css!../plugins/bootstrap-modal/css/bootstrap-modal.css','css!../plugins/bootstrap-modal/css/bootstrap-modal-bs3patch.css']},
 
             'bootstrap-fileinput':{deps:['bootstrap','css!bootstrap-fileinput.css']},
+            'fileinput':['bootstrap','canvas-to-blob','purify','sortable','css!../plugins/bootstrap-fileinput/fileinput.min.css'],
+            'explorer-theme' : ['fileinput','css!../plugins/bootstrap-fileinput/themes/explorer/theme.css']
 
-            'jquery.ui.widget':["jquery"],
-            'jquery.blueimp-gallery':{deps:['blueimp-helper','css!../plugins/jquery-file-upload/blueimp-gallery/blueimp-gallery.min.css']},
-            'jquery.fancybox':{deps:['css!../plugins/fancybox/source/jquery.fancybox.css']},
-            'jquery.fileupload':{deps:['css!../plugins/jquery-file-upload/css/jquery.fileupload.css']},
-            'jquery.fileupload-ui':{deps:['jquery.fancybox','jquery.ui.widget','tmpl','load-image','jquery.blueimp-gallery','canvas-to-blob','jquery.iframe-transport','jquery.fileupload','css!../plugins/jquery-file-upload/css/jquery.fileupload-ui.css']}
 
         }
 
@@ -184,7 +163,7 @@
             return false;
         }
         if(isArray(modules)) {
-            console.log("module is a arrays ...");
+            console.log("welcome to www.jokls.com ");
             require(modules, callback);
         }
     };

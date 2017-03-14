@@ -4,4 +4,4 @@
 
 swell.require(["layout","bootstrap-fileinput"], function () {
 
-})
+});

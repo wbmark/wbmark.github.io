@@ -5,41 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Dashboard</title>
 
-    <link rel="stylesheet" id="s_superplus_css_lnk" type="text/css" href="../asserts/plugins/jquery-ui/jquery-ui.min.css">
-    <link rel="stylesheet" id="boot_css_lnk" type="text/css" href="../asserts/plugins/bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" id="boot__themet_css_lnk" type="text/css" href="../asserts/plugins/bootstrap/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" id="boot__switch_css_lnk" type="text/css" href="../asserts/plugins/bootstrap-switch/css/bootstrap-switch.min.css">
+    <link rel="stylesheet" id="s_superplus_css_lnk" type="text/css" href="../assets/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" id="boot_css_lnk" type="text/css" href="../assets/plugins/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" id="boot__themet_css_lnk" type="text/css" href="../assets/plugins/bootstrap/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" id="boot__switch_css_lnk" type="text/css" href="../assets/plugins/bootstrap-switch/css/bootstrap-switch.min.css">
+    <!--<link rel="stylesheet" id="boot__krajee_css_lnk" type="text/css" href="../assets/plugins/bootstrap-fileinput/plugins/krajee.css">-->
 
 
 
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="../asserts/plugins/html5shiv.js"></script>
-    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-
-    <![endif]-->
-
-    <script src="../asserts/plugins/modernizr/modernizr-2.6.2.min.js"></script>
 
     <!--布局样式-->
-    <link rel="stylesheet" id="dashboard_css_lnk" type="text/css" href="../asserts/layouts/layout/css/layout.css">
+    <link rel="stylesheet" id="dashboard_css_lnk" type="text/css" href="../assets/layouts/layout/css/layout.css">
 
     <!--theme 样式 可替换 -->
-    <link rel="stylesheet" id="theme_blue_lnk" type="text/css" href="../asserts/layouts/layout/css/themes/darkblue.css">
+    <link rel="stylesheet" id="theme_blue_lnk" type="text/css" href="../assets/layouts/layout/css/themes/darkblue.css">
 
     <!--组件样式库 如button  form-->
     <link rel="stylesheet" id="theme_component_lnk" type="text/css" href="../css/common/components-rounded.min.css">
 
     <!--简单图标样式-->
-    <link rel="stylesheet" id="theme_simple_lnk" type="text/css" href="../asserts/plugins/simple-line-icons/simple-line-icons.css">
-    <link rel="stylesheet" id="theme_awesome_lnk" type="text/css" href="../asserts/plugins/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" id="theme_simple_lnk" type="text/css" href="../assets/plugins/simple-line-icons/simple-line-icons.css">
+    <link rel="stylesheet" id="theme_awesome_lnk" type="text/css" href="../assets/plugins/font-awesome/css/font-awesome.css">
 
+    <style>
+        .file-preview-frame{
+            float: none;
+        }
+    </style>
 
-    <!--<!--<script src="../asserts/plugins/jQuery-2.2.0.min.js"></script>-->-->
-    <script src="../asserts/plugins/require/require-2.2.0.min.js"></script>
-    <script src="../asserts/core/swell_core.js"></script>
-    <script src="../asserts/core/swell_loader.js"></script>
 </head>
 <body class="page-header-fixed page-sidebar-closed-hide-logo page-content-white">
 
@@ -1529,6 +1523,7 @@
     <!-- END SIDEBAR -->
 
 
+    <!-- BEGIN CONTENT -->
     <div class="page-content-wrapper">
         <!-- BEGIN CONTENT BODY -->
         <div class="page-content">
@@ -1623,7 +1618,7 @@
                         <i class="fa fa-circle"></i>
                     </li>
                     <li>
-                        <span>Form Stuff</span>
+                        <span>Components</span>
                     </li>
                 </ul>
                 <div class="page-toolbar">
@@ -1655,144 +1650,78 @@
             </div>
             <!-- END PAGE BAR -->
             <!-- BEGIN PAGE TITLE-->
-            <h3 class="page-title"> Multiple File Upload
-                <small>amazing file upload experience</small>
+            <h3 class="page-title"> Bootstrap File Input
+                <small>advanced bootstrap file input examples</small>
             </h3>
             <!-- END PAGE TITLE-->
             <!-- END PAGE HEADER-->
+            <div class="note note-success">
+                <h3>Bootstrap File Input</h3>
+                <p> The file input plugin allows you to create a visually appealing file or image input widgets. For more info please check out
+                    <a href="http://www.jasny.net/bootstrap/javascript/#fileinput" target="_blank">the official documentation</a>. </p>
+            </div>
             <div class="row">
                 <div class="col-md-12">
-                    <div class="m-heading-1 border-green m-bordered">
-                        <h3>jQuery Validation Plugin</h3>
-                        <p> File Upload widget with multiple file selection, drag&amp;drop support, progress bars and preview images for jQuery.
-                            <br> Supports cross-domain, chunked and resumable file uploads and client-side image resizing.
-                            <br> Works with any server-side platform (PHP, Python, Ruby on Rails, Java, Node.js, Go etc.) that supports standard HTML form file uploads. </p>
-                        <p> For more info please check out
-                            <a class="btn red btn-outline" href="https://github.com/blueimp/jQuery-File-Upload" target="_blank">the official documentation</a>
-                        </p>
-                    </div>
-                    <form id="fileupload" action="../assets/global/plugins/jquery-file-upload/server/php/" method="POST" enctype="multipart/form-data">
-                        <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
-                        <div class="row fileupload-buttonbar">
-                            <div class="col-lg-7">
-                                <!-- The fileinput-button span is used to style the file input field as button -->
-                                <span class="btn green fileinput-button">
-                                            <i class="fa fa-plus"></i>
-                                            <span> Add files... </span>
-                                            <input type="file" name="files[]" multiple=""> </span>
-                                <button type="submit" class="btn blue start">
-                                    <i class="fa fa-upload"></i>
-                                    <span> Start upload </span>
-                                </button>
-                                <button type="reset" class="btn warning cancel">
-                                    <i class="fa fa-ban-circle"></i>
-                                    <span> Cancel upload </span>
-                                </button>
-                                <button type="button" class="btn red delete">
-                                    <i class="fa fa-trash"></i>
-                                    <span> Delete </span>
-                                </button>
-                                <input type="checkbox" class="toggle">
-                                <!-- The global file processing state -->
-                                <span class="fileupload-process"> </span>
+
+                    <!-- BEGIN PORTLET-->
+                    <div class="portlet light form-fit bordered">
+                        <div class="portlet-title">
+                            <div class="caption">
+                                <i class="icon-settings font-green"></i>
+                                <span class="caption-subject font-green sbold uppercase">Advanced File Input</span>
                             </div>
-                            <!-- The global progress information -->
-                            <div class="col-lg-5 fileupload-progress fade">
-                                <!-- The global progress bar -->
-                                <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
-                                    <div class="progress-bar progress-bar-success" style="width:0%;"> </div>
+                            <div class="actions">
+                                <input type="checkbox" class="make-switch" checked data-on="success" data-on-color="success" data-off-color="warning" data-size="small"> </div>
+                        </div>
+                        <div class="portlet-body form">
+                            <!-- BEGIN FORM-->
+                            <form action="#" class="form-horizontal form-bordered">
+                                <div class="form-body">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Image Upload #3</label>
+                                        <div class="col-md-9">
+                                            <div class="fileinput fileinput-new" data-provides="fileinput">
+                                                <div>
+                                                    <label class="control-label">Select File</label>
+                                                    <input id="input-ke-1" name="inputKE1[]" type="file" multiple class="file-loading" accept="image">
+                                                    <a href="javascript:;" class="btn red fileinput-exists" data-dismiss="fileinput"> Remove </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group last">
+                                        <label class="control-label col-md-3">Image Upload #4</label>
+                                        <div class="col-md-9">
+                                            <!--<div class="fileinput fileinput-new" data-provides="fileinput">-->
+                                            <!--<div class="fileinput-new thumbnail" style="width: 200px; height: 150px;">-->
+                                            <!--<img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=no+image" alt="" /> </div>-->
+                                            <!--<div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"> </div>-->
+                                            <div>
+                                                <label class="control-label">Select File</label>
+                                                <input id="input-ke-2" name="inputKE2[]" type="file" multiple class="file-loading" accept="image">
+                                                <a href="javascript:;" class="btn red fileinput-exists" data-dismiss="fileinput"> Remove </a>
+                                            </div>
+                                            <!--</div>-->
+                                        </div>
+                                    </div>
+
                                 </div>
-                                <!-- The extended global progress information -->
-                                <div class="progress-extended"> &nbsp; </div>
-                            </div>
-                        </div>
-                        <!-- The table listing the files available for upload/download -->
-                        <table role="presentation" class="table table-striped clearfix">
-                            <tbody class="files"> </tbody>
-                        </table>
-                    </form>
-                    <div class="panel panel-success">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">Demo Notes</h3>
-                        </div>
-                        <div class="panel-body">
-                            <ul>
-                                <li> The maximum file size for uploads in this demo is
-                                    <strong>5 MB</strong> (default file size is unlimited). </li>
-                                <li> Only image files (
-                                    <strong>JPG, GIF, PNG</strong>) are allowed in this demo (by default there is no file type restriction). </li>
-                                <li> Uploaded files will be deleted automatically after
-                                    <strong>5 minutes</strong> (demo setting). </li>
-                            </ul>
+                                <div class="form-actions">
+                                    <div class="row">
+                                        <div class="col-md-offset-3 col-md-9">
+                                            <a href="javascript:;" class="btn green">
+                                                <i class="fa fa-check"></i> Submit</a>
+                                            <a href="javascript:;" class="btn btn-outline grey-salsa">Cancel</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <!-- END FORM-->
                         </div>
                     </div>
+                    <!-- END PORTLET-->
                 </div>
             </div>
-            <!-- The blueimp Gallery widget -->
-            <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls" data-filter=":even">
-                <div class="slides"> </div>
-                <h3 class="title"></h3>
-                <a class="prev"> ‹ </a>
-                <a class="next"> › </a>
-                <a class="close white"> </a>
-                <a class="play-pause"> </a>
-                <ol class="indicator"> </ol>
-            </div>
-            <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
-            <script id="template-upload" type="text/x-tmpl"> {% for (var i=0, file; file=o.files[i]; i++) { %}
-                        <tr class="template-upload fade">
-                            <td>
-                                <span class="preview"></span>
-                            </td>
-                            <td>
-                                <p class="name">{%=file.name%}</p>
-                                <strong class="error text-danger label label-danger"></strong>
-                            </td>
-                            <td>
-                                <p class="size">Processing...</p>
-                                <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
-                                    <div class="progress-bar progress-bar-success" style="width:0%;"></div>
-                                </div>
-                            </td>
-                            <td> {% if (!i && !o.options.autoUpload) { %}
-                                <button class="btn blue start" disabled>
-                                    <i class="fa fa-upload"></i>
-                                    <span>Start</span>
-                                </button> {% } %} {% if (!i) { %}
-                                <button class="btn red cancel">
-                                    <i class="fa fa-ban"></i>
-                                    <span>Cancel</span>
-                                </button> {% } %} </td>
-                        </tr> {% } %} </script>
-            <!-- The template to display files available for download -->
-            <script id="template-download" type="text/x-tmpl"> {% for (var i=0, file; file=o.files[i]; i++) { %}
-                        <tr class="template-download fade">
-                            <td>
-                                <span class="preview"> {% if (file.thumbnailUrl) { %}
-                                    <a href="{%=file.url%}" title="{%=file.name%}" download="{%=file.name%}" data-gallery>
-                                        <img src="{%=file.thumbnailUrl%}">
-                                    </a> {% } %} </span>
-                            </td>
-                            <td>
-                                <p class="name"> {% if (file.url) { %}
-                                    <a href="{%=file.url%}" title="{%=file.name%}" download="{%=file.name%}" {%=file.thumbnailUrl? 'data-gallery': ''%}>{%=file.name%}</a> {% } else { %}
-                                    <span>{%=file.name%}</span> {% } %} </p> {% if (file.error) { %}
-                                <div>
-                                    <span class="label label-danger">Error</span> {%=file.error%}</div> {% } %} </td>
-                            <td>
-                                <span class="size">{%=o.formatFileSize(file.size)%}</span>
-                            </td>
-                            <td> {% if (file.deleteUrl) { %}
-                                <button class="btn red delete btn-sm" data-type="{%=file.deleteType%}" data-url="{%=file.deleteUrl%}" {% if (file.deleteWithCredentials) { %} data-xhr-fields='{"withCredentials":true}' {% } %}>
-                                    <i class="fa fa-trash-o"></i>
-                                    <span>Delete</span>
-                                </button>
-                                <input type="checkbox" name="delete" value="1" class="toggle"> {% } else { %}
-                                <button class="btn yellow cancel btn-sm">
-                                    <i class="fa fa-ban"></i>
-                                    <span>Cancel</span>
-                                </button> {% } %} </td>
-                        </tr> {% } %} </script>
         </div>
         <!-- END CONTENT BODY -->
     </div>
@@ -2366,10 +2295,20 @@
 
 </body>
 
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+<script src="../assets/plugins/html5shiv.js"></script>
+<script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+
+<![endif]-->
+
+<script src="../assets/plugins/modernizr/modernizr-2.6.2.min.js"></script>
+
+<script src="../assets/plugins/require/require-2.2.0.min.js"></script>
+<script src="../assets/core/swell_core.js"></script>
+<script src="../assets/core/swell_loader.js"></script>
+
 <script src="js/form-fileupload.js"></script>
-
-
-
 
 
 </html>
